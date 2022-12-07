@@ -1,7 +1,10 @@
-import {View, Text, Pressable, StyleSheet} from 'react-native';
+import {View, Text, Pressable, StyleSheet, Dimensions} from 'react-native';
 
 import Colors from '../constants/colors';
+import {OpenSans} from '../assets/fonts/OpenSans';
 
+const deviceWidth = Dimensions.get('window').width;
+const deviceHeight = Dimensions.get('window').height;
 function PrimaryButton({children, onPress}) {
   return (
     <View style={styles.buttonOuterContainer}>
@@ -36,6 +39,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     textAlign: 'center',
+    fontFamily: 'OpenSans-Bold',
   },
   pressed: {
     opacity: 0.75,
